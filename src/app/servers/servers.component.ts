@@ -4,16 +4,23 @@ import { Component, OnInit } from '@angular/core';
   // selector: '[app-servers]',
   // selector: '.app-servers',
   selector: 'app-servers',
-  template: `
-    <app-server></app-server>
-    <app-server></app-server>`,
+  templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
+newserver = 12;
+oldservername = 'arthi';
+disablemad = false;
+Message = 'you are mad';
+  constructor() { setTimeout(
+    () =>{ this.disablemad = true;}, 1000
+  );
+   }
 
   ngOnInit() {
   }
+  Onclick(){
 
+this.Message = 'you are not mad';
+  }
 }
